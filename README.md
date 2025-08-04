@@ -4,7 +4,7 @@ PBF-FR is a method for the automatic recognition of façades within complex urba
 
 The first submodule ...
 
-The second submodule is developed in MATLAB and it is detailed in Section 4.2.
+The second submodule https://github.com/chiararomanengo/facades_recognition.git is developed in MATLAB and it is detailed in Section 4.2.
 
 ## Clone
 

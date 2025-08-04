@@ -1,0 +1,6 @@
+[submodule "src/partitioning"]
+	path = src/partitioning
+	url = https://github.com/DanielaCabiddu/PBF-FR-partitioning.git
+[submodule "src/recognition"]
+	path = src/recognition
+	url = https://github.com/chiararomanengo/facades_recognition.git

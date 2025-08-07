@@ -17,7 +17,7 @@ In the following, assume the **${ROOT}** folder to be the one whee this *README*
 ## Content of the repository
 - `src`: source code including the two submodules where the two main steps of the pipeline are implemented
   - `partitioning`: developed in C++ and detailed in Section 4.1 of the paper 
-  - `regognition`: developed in MATLAB and detailed in Section 4.2 of the paper 
+  - `recognition`: developed in MATLAB and detailed in Section 4.2 of the paper 
 - `scripts`: scripts necessary to build C++ code and replicate experiments described in the paper
 
 ## Build the source code
@@ -29,6 +29,16 @@ cd ${ROOT}
 ```
 
 Binaries will be available in the **${ROOT}/bin** folder
+
+## Other software requirements to make the code work
+
+The MATLAB source code is based on some MATLAB Toolboxes, which must be installed before running the recognition step.
+
+Please, if not yet installed, please consider to make the following toolboxes available:
+
+- LIDAR Toolbox
+- Statistics and Machine Learning Toolbox
+- Text Analytics Toolbox
 
 ## Paper Replicability
 

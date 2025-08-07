@@ -4,10 +4,6 @@ PBF-FR is a method for the automatic recognition of façades within complex urba
 
 ![Representative Image](images/representative_image.png)
 
-The first submodule ...
-
-The second submodule https://github.com/chiararomanengo/facades_recognition.git is developed in MATLAB and it is detailed in Section 4.2.
-
 ## Clone
 The repository includes the submodules necessary to make the code work. Please, clone it recursively:
 
@@ -19,7 +15,9 @@ git clone --recursive https://github.com/DanielaCabiddu/PBF-FR.git
 In the following, assume the **${ROOT}** folder to be the one whee this *README* lies.
 
 ## Content of the repository
-- `src`: source code 
+- `src`: source code including the two submodules where the two main steps of the pipeline are implemented
+  - `partitioning`: developed in C++ and detailed in Section 4.1 of the paper 
+  - `regognition`: developed in MATLAB and detailed in Section 4.2 of the paper 
 - `scripts`: scripts necessary to build C++ code and replicate experiments described in the paper
 
 ## Build the source code

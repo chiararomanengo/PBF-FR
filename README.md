@@ -1,4 +1,4 @@
-# PBF-FR
+# PBF-FR : PBF-FR: Partitioning Beyond Footprints for Façade Recognition in Urban Point Clouds
 
 PBF-FR is a method for the automatic recognition of façades within complex urban scenes represented as point clouds. The algorithm employs an enhanced partitioning strategy that extends beyond strict building footprints by incorporating surrounding buffer zones, allowing for a more complete capture of façade geometry, particularly in dense urban contexts. This is combined with a primitive recognition stage based on the Hough transform, enabling the detection of façade structures. The main steps of the method are described in the paper "PBF-FR: Partitioning Beyond Footprints for Façade Recognition in Urban Point Clouds".
 

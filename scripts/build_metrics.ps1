@@ -5,8 +5,8 @@ Push-Location
 $scriptDir = $PSScriptRoot
 
 # Define paths
-$sourceDir = Join-Path $scriptDir "/../src/partitioning"
-$buildDir = Join-Path $scriptDir "/../build/partitioning"
+$sourceDir = Join-Path $scriptDir "/../src/metrics"
+$buildDir = Join-Path $scriptDir "/../build/metrics"
 
 $binDir = Join-Path $scriptDir "/../bin"
 

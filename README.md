@@ -7,7 +7,50 @@ The first submodule ...
 The second submodule https://github.com/chiararomanengo/facades_recognition.git is developed in MATLAB and it is detailed in Section 4.2.
 
 ## Clone
+The repository includes the submodules necessary to make the code work. Please, clone it recursively:
 
-The repository includes some submodules necessary to make PBF-FR work. Please, clone it recursively:
+- Clone recursively the repository into your local machine:
+```
+git clone --recursive https://github.com/DanielaCabiddu/PBF-FR.git
+```
 
-git clone --recursive https://github.com/chiararomanengo/PBF-FR/
+In the following, assume the **${ROOT}** folder to be the one whee this *README* lies.
+
+## Content of the repository
+- `src`: source code 
+- `scripts`: scripts necessary to build C++ code and replicate experiments described in the paper
+
+## Build the source code
+To build the C++ source code, use the following pipeline:
+
+```
+cd ${ROOT}
+./scripts/build_all.ps1
+```
+
+Binaries will be available in the **${ROOT}/bin** folder
+
+## Paper Replicability
+
+
+
+
+## Author & Copyright
+Chiara Romanengo (CNR-IMATI). Contact Email: chiara.romanengo@cnr.it
+Daniela Cabiddu (CNR-IMATI). Contact Email: daniela.cabiddu@cnr.it
+
+## Citing us
+```bibtex
+@article{pbf-fr,
+  author       = {Chiara Romanengo, Daniela Cabiddu, Michela Mortara},
+  title        = {{PBF-FR: Partitioning Beyond Footprints for Façade Recognition in Urban Point Clouds}},
+  year         = {2025 (to appear)},
+  journal      = {Computers \& Graphics - Special Issue 3DOR 2025}
+}
+```
+
+## Acknowledgment
+
+This work was partially supported by the project RAISE – Robotics and AI for Socio-economic Empowerment (project code ECS00000035), funded by the European Union – NextGenerationEU and by the Italian Ministry of University and Research (MUR) under the National Recovery and Resilience Plan (NRRP), Mission 4, Component 2, Investment 1.5, Creation and strengthening of innovation ecosystems for sustainability.
+
+The authors also acknowledge support from the project PON METRO – ASSE 1 – Agenda Digitale, titled Urban Intelligence Science Hub (UISH) for City Network (CUP: B51B21000430001), funded under the Italian National Operational Program for Metropolitan Cities 2014–2020.

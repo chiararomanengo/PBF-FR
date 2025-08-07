@@ -69,7 +69,8 @@ int main(int argc, char *argv[])
 
     for (uint d=0; d < subfolderCount; d++)
     {
-        las_filename = las_directory + "\\" + std::to_string(d) + "\\" + std::to_string(d) + "_Nov18_train_lastools_grouped_grouped.las.LAS";
+        // las_filename = las_directory + "\\" + std::to_string(d) + "\\" + std::to_string(d) + "_Nov18_train_lastools_grouped.las.LAS";
+        las_filename = las_directory + "\\" + std::to_string(d) + "\\" + std::to_string(d) + ".las";
         facade_filename = our_directory + "\\building" + std::to_string(d) + "\\label.txt";
 
         std::vector<bool> point_is_facade;

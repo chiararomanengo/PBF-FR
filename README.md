@@ -32,11 +32,14 @@ Binaries will be available in the **${ROOT}/bin** folder
 
 ## Paper Replicability
 
+Scripts in the **${ROOT}/scripts** folder allow the replicability of the experimental results descried in the paper. 
 
-
+Use the **${ROOT}/scripts/run_H3D.ps1** script to replicate the experiments using H3D dataset. First, the script will download the input data (too large to be included into the repository). Then, the partitioning approach will be executed. An OpenGL will will show Figure 4(c). By closing the window, the partitioning is finalized and the result will be saved in **${ROOT}/PBF-FR-H3D-results**. The facade recognition approach is then automatically started, and the result will be available in **${ROOT}/src/recognition/output** folder. Finally, the computation of the evaluation metrices is automatically run and results are shown in the command line shell.
 
 ## Author & Copyright
+
 Chiara Romanengo (CNR-IMATI). Contact Email: chiara.romanengo@cnr.it
+
 Daniela Cabiddu (CNR-IMATI). Contact Email: daniela.cabiddu@cnr.it
 
 ## Citing us

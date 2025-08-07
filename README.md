@@ -42,9 +42,50 @@ Please, if not yet installed, please consider to make the following toolboxes av
 
 ## Paper Replicability
 
-Scripts in the **${ROOT}/scripts** folder allow the replicability of the experimental results descried in the paper. 
+The scripts provided in the `${ROOT}/scripts` folder enable full replication of the experimental results described in the paper.
 
-Use the **${ROOT}/scripts/run_H3D.ps1** script to replicate the experiments using H3D dataset. First, the script will download the input data (too large to be included into the repository). Then, the partitioning approach will be executed. An OpenGL will will show Figure 4(c). By closing the window, the partitioning is finalized and the result will be saved in **${ROOT}/PBF-FR-H3D-results**. The facade recognition approach is then automatically started, and the result will be available in **${ROOT}/src/recognition/output** folder. Finally, the computation of the evaluation metrices is automatically run and results are shown in the command line shell.
+To reproduce the experiments using the **H3D dataset**, run the following PowerShell script:
+
+```powershell
+${ROOT}/scripts/run_H3D.ps1
+```
+
+<details>
+<summary><strong> What the script does </strong> </summary>
+
+This script automates the full experimental pipeline as follows:
+
+1. **Download the input data**  
+   The required input data (too large to be included in the repository) is automatically downloaded from the web.
+
+2. **Run the partitioning algorithm**  
+   The script executes the partitioning approach described in the paper.  
+   During execution, an OpenGL viewer will open to display the result (corresponding to **Figure 4(c)** in the paper).  
+   > 🖱️ *Close the OpenGL window to continue.*
+
+3. **Save partitioning results**  
+   Partitioned outputs are saved in the following folder:
+
+   ```
+   ${ROOT}/PBF-FR-H3D-results
+   ```
+
+4. **Execute the facade recognition step**  
+   This step is automatically triggered after partitioning completes.  
+   The recognition output is saved to:
+
+   ```
+   ${ROOT}/src/recognition/output
+   ```
+
+5. **Compute and display evaluation metrics**  
+   The script runs evaluation routines and prints the computed metrics directly in the PowerShell terminal.
+
+✅ This process reproduces all the steps and results associated with the H3D experiment from the paper.
+
+</details>
+
+
 
 ## Author & Copyright
 

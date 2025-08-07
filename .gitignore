@@ -42,3 +42,5 @@
 
 src/metrics/CMakeLists.txt.user
 src/metrics/build
+
+PBF-FR-H3D-results/

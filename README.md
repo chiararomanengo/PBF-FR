@@ -9,7 +9,7 @@ The repository includes the submodules necessary to make the code work. Please, 
 
 - Clone recursively the repository into your local machine:
 ```
-git clone --recursive https://github.com/DanielaCabiddu/PBF-FR.git
+git clone --recursive https://github.com/chiararomanengo/PBF-FR.git
 ```
 
 In the following, assume the **${ROOT}** folder to be the one whee this *README* lies.
@@ -44,7 +44,14 @@ Please, if not yet installed, please consider to make the following toolboxes av
 
 The scripts provided in the `${ROOT}/scripts` folder enable full replication of the experimental results described in the paper.
 
-To reproduce the experiments using the **H3D dataset**, run the following PowerShell script:
+To reproduce the experiments using the **H3D dataset**, first configure the path to your MATLAB installation.
+Edit line 3 of **${ROOT}/scripts/run_H3D.ps1** and set it to your MATLAB executable, for example:
+
+```
+$matlabExe = "C:\Program Files\MATLAB\R2025a\bin\matlab.exe"
+``` 
+
+Once the path is set, execute the PowerShell script:
 
 ```powershell
 ${ROOT}/scripts/run_H3D.ps1

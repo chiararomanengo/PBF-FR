@@ -81,7 +81,7 @@ This script automates the full experimental pipeline as follows:
 5. **Compute and display evaluation metrics**  
    The script runs evaluation routines and prints the computed metrics directly in the PowerShell terminal.
 
-✅ This process reproduces all the steps and results associated with the H3D experiment from the paper.
+✅ This process reproduces all the steps and results associated with the H3D experiment from the paper. In particular, it provides Figure 4(c) and the results of the quantitative evaluation, that is the value of precision, recall, F1-score, true positives (TP), false positives (FP), false negatives (FN), and true negatives (TN).
 
 </details>
 

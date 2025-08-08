@@ -1,12 +1,8 @@
-# PBF-FR
+# PBF-FR : Partitioning Beyond Footprints for Façade Recognition in Urban Point Clouds
 
 PBF-FR is a method for the automatic recognition of façades within complex urban scenes represented as point clouds. The algorithm employs an enhanced partitioning strategy that extends beyond strict building footprints by incorporating surrounding buffer zones, allowing for a more complete capture of façade geometry, particularly in dense urban contexts. This is combined with a primitive recognition stage based on the Hough transform, enabling the detection of façade structures. The main steps of the method are described in the paper "PBF-FR: Partitioning Beyond Footprints for Façade Recognition in Urban Point Clouds".
 
-![Representative Image](images/representative-image.png)
-
-The first submodule ...
-
-The second submodule https://github.com/chiararomanengo/facades_recognition.git is developed in MATLAB and it is detailed in Section 4.2.
+![Representative Image](images/representative_image.png)
 
 ## Clone
 The repository includes the submodules necessary to make the code work. Please, clone it recursively:
@@ -19,7 +15,9 @@ git clone --recursive https://github.com/DanielaCabiddu/PBF-FR.git
 In the following, assume the **${ROOT}** folder to be the one whee this *README* lies.
 
 ## Content of the repository
-- `src`: source code 
+- `src`: source code including the two submodules where the two main steps of the pipeline are implemented
+  - `partitioning`: developed in C++ and detailed in Section 4.1 of the paper 
+  - `recognition`: developed in MATLAB and detailed in Section 4.2 of the paper 
 - `scripts`: scripts necessary to build C++ code and replicate experiments described in the paper
 
 ## Build the source code
@@ -32,11 +30,62 @@ cd ${ROOT}
 
 Binaries will be available in the **${ROOT}/bin** folder
 
+## Other software requirements to make the code work
+
+The MATLAB source code is based on some MATLAB Toolboxes, which must be installed before running the recognition step.
+
+Please, if not yet installed, please consider to make the following toolboxes available:
+
+- LIDAR Toolbox
+- Statistics and Machine Learning Toolbox
+- Text Analytics Toolbox
+
 ## Paper Replicability
 
-Scripts in the **${ROOT}/scripts** folder allow the replicability of the experimental results descried in the paper. 
+The scripts provided in the `${ROOT}/scripts` folder enable full replication of the experimental results described in the paper.
 
-Use the **${ROOT}/scripts/run_H3D.ps1** script to replicate the experiments using H3D dataset. First, the script will download the input data (too large to be included into the repository). Then, the partitioning approach will be executed. An OpenGL will will show Figure 4(c). By closing the window, the partitioning is finalized and the result will be saved in **${ROOT}/PBF-FR-H3D-results**. The facade recognition approach is then automatically started, and the result will be available in **${ROOT}/src/recognition/output** folder. Finally, the computation of the evaluation metrices is automatically run and results are shown in the command line shell.
+To reproduce the experiments using the **H3D dataset**, run the following PowerShell script:
+
+```powershell
+${ROOT}/scripts/run_H3D.ps1
+```
+
+<details>
+<summary><strong> What the script does </strong> </summary>
+
+This script automates the full experimental pipeline as follows:
+
+1. **Download the input data**  
+   The required input data (too large to be included in the repository) is automatically downloaded from the web.
+
+2. **Run the partitioning algorithm**  
+   The script executes the partitioning approach described in the paper.  
+   During execution, an OpenGL viewer will open to display the result (corresponding to **Figure 4(c)** in the paper).  
+   > 🖱️ *Close the OpenGL window to continue.*
+
+3. **Save partitioning results**  
+   Partitioned outputs are saved in the following folder:
+
+   ```
+   ${ROOT}/PBF-FR-H3D-results
+   ```
+
+4. **Execute the facade recognition step**  
+   This step is automatically triggered after partitioning completes.  
+   The recognition output is saved to:
+
+   ```
+   ${ROOT}/src/recognition/output
+   ```
+
+5. **Compute and display evaluation metrics**  
+   The script runs evaluation routines and prints the computed metrics directly in the PowerShell terminal.
+
+✅ This process reproduces all the steps and results associated with the H3D experiment from the paper.
+
+</details>
+
+
 
 ## Author & Copyright
 
